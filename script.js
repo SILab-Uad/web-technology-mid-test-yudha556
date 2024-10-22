@@ -1,7 +1,7 @@
 
 // TODO: Implement the password generation logic based on user input
 
-function generatePassword(length, options) {
+const generatePassword = (length, options) => {
     // Character sets for password generation
     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -14,11 +14,12 @@ function generatePassword(length, options) {
     if (options.includeLowercase) charset += lowercase;
     if (options.includeNumbers) charset += numbers;
     if (options.includeSpecialChars) charset += specialChars;
+    
+    
     // TODO: Generate the password based on the selected criteria
-    if (charset.length === 0) {
-    console.log("Please select at least one criteria.");
-    return;
-};
+    if (charset === "") {
+        throw new Error("At least one character type must be selected");
+    }
 
     let password = "";
     for (let i = 0; i < length; i++) {
