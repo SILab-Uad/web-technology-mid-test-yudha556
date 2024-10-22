@@ -29,9 +29,6 @@ function generatePassword(length, options) {
 };
 
 
-module.exports = generatePassword;
-
-
 //  TODO: Add event listener to the button to call generatePassword and display the output
 // from mahasiswa: buat kode yang ini fungsinya udah ada di DOM.js ka, jadi kami kebingungan buat task yang ini
 
