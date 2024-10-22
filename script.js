@@ -17,9 +17,11 @@ const generatePassword = (length, options) => {
     
     
     // TODO: Generate the password based on the selected criteria
-    if (charset === "") {
+    if (!options.includeUppercase && !options.includeLowercase && 
+        !options.includeNumbers && !options.includeSpecialChars) {
         throw new Error("At least one character type must be selected");
     }
+    
 
     let password = "";
     for (let i = 0; i < length; i++) {
