@@ -15,7 +15,6 @@ const generatePassword = (length, options) => {
     if (options.includeSpecialChars) charset += specialChars;
     // TODO: Generate the password based on the selected criteria
     if (charset.length === 0) {
-    alert("Please select at least one criteria.");
     console.log("Please select at least one criteria.");
     return;
 };
@@ -27,6 +26,8 @@ const generatePassword = (length, options) => {
     }
     return password;
 };
+
+module.exports = { createPassword };
 
 //  TODO: Add event listener to the button to call generatePassword and display the output
 // from mahasiswa: buat kode yang ini fungsinya udah ada di DOM.js ka, jadi kami kebingungan buat task yang ini
