@@ -35,7 +35,9 @@ module.exports = generatePassword;
 //  TODO: Add event listener to the button to call generatePassword and display the output
 // from mahasiswa: buat kode yang ini fungsinya udah ada di DOM.js ka, jadi kami kebingungan buat task yang ini
 
-
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { generatePassword }
+}
 
 // BONUS: Implement the copy to clipboard functionality
 // terus buat yang ini juga udah ada di DOM.js jadi biar alertnya ga double, aku ganti dari alert ke console.log ka 
